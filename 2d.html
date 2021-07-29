@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        article{
+            width: 600px;
+            height: 600px;
+            margin: 300px auto;
+            transform-style: preserve-3d;
+            transform: rotatex(-25deg);
+            transition:all 10s;
+        }
+        ul{
+            height: 300px;
+            width: 300px;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            /* transform: rotatex(20deg); */
+            /* perspective: 100px; */
+            animation: wai 5s infinite linear;
+          }
+          li{
+              list-style: none;
+              width: 300px;
+              height: 300px;
+              position: absolute;
+             /* -webkit-transition:all 10s; */
+          }
+          .li1{
+              /* transform: translatez(150px); */
+              background: url(./img/h1.jpg);
+              background-size: 300px 300px;
+              animation: li1 5s infinite linear;
+              transition: all 2s;
+          }
+          .li2{
+              /* transform: translate(0); */
+              background: url(./img/h2.jpg);
+              background-size: 300px 300px;
+              animation: li2 5s infinite linear;
+          }
+          .li3{
+              /* transform:rotatex(90deg) translatez(150px); */
+              background: url(./img/h3.jpg);
+              animation: li3 5s infinite linear;
+          }
+          .li4{
+              /* transform:rotatex(-90deg) translatez(150px); */
+              background: url(./img/h4.jpg);
+              animation: li4 5s infinite linear;
+          }
+          .li5{
+              /* transform:rotatey(90deg) translatez(150px); */
+              background: url(./img/h5.jpg);
+              animation: li5 5s infinite linear;
+          }
+          .li6{
+              /* transform:rotatey(-90deg) translatez(150px); */
+              background: url(./img/h6.jpg);
+              animation: li6 5s infinite linear;
+          }
+          .li7{
+              width: 160px;
+              height: 160px;
+              transform-style: preserve-3d;
+              position: relative;
+              margin: 70px 70px;
+              /* transform: translatey(70px); */
+              transition: all 10s;
+          }
+          @keyframes wai{
+              0%{ 
+                  transform: rotatey(0deg);
+                  transform-origin: 20% 60%;
+              }
+              100%{
+                transform: rotatey(360deg);
+              }
+          }
+          @keyframes li1{
+              0%{
+                  transform: translatez(150px);
+              }
+              50%{
+                transform: translatez(350px);
+              }
+              100%{
+                transform: translatez(150px);
+              } 
+          }
+          @keyframes li2{
+              0%{
+                  transform: translatez(-150px);
+              }
+              50%{
+                transform: translatez(-350px);
+              }
+              100%{
+                transform: translatez(-150px);
+              }
+            }
+            @keyframes li3{
+              0%{
+                  transform:rotatex(-90deg) translatez(150px);
+              }
+              50%{
+                transform:rotateX(-90deg) translatez(350px) ;
+              }
+              100%{
+                transform:rotateX(-90deg) translatez(150px) ;
+              }
+            }
+            @keyframes li4{
+              0%{
+                  transform: rotateX(90deg) translatez(150px);
+              }
+              50%{
+                transform: rotateX(90deg) translatez(350px);
+              }
+              100%{
+                transform: rotateX(90deg) translatez(150px);
+              }
+            }
+            @keyframes li5{
+              0%{
+                transform:rotatey(-90deg) translatez(150px);
+              }
+              50%{
+                transform:rotatey(-90deg) translatez(350px);
+              }
+              100%{
+                transform:rotatey(-90deg) translatez(150px);
+              }
+            }
+            @keyframes li6{
+              0%{
+                  transform:rotatey(90deg) translatez(150px) ;
+              }
+              50%{
+                transform:rotatey(90deg) translatez(350px) ;
+              }
+              100%{
+                transform: rotatey(90deg) translatez(150px);
+              }
+            }
+          .li7 div{
+              background: url(./img/冷女150.jpg);
+              background-size: auto;
+          }
+          div{
+              width: 160px;
+              height: 160px;
+              position: absolute;
+          }
+          .div1{
+              transform: translatez(80px);
+          }
+          .div2{
+              transform: translatez(-80px);
+          }
+          .div3{
+              transform:rotatex(90deg) translatez(80px);
+          }
+          .div4{
+              transform:rotatex(-90deg) translatez(80px);
+          }
+          .div5{
+              transform:rotatey(90deg) translatez(80px);
+          }
+          .div6{
+              transform:rotatey(-90deg) translatez(80px);
+          } 
+    </style>
+</head>
+<body>
+    <article>
+        <ul>
+            <li class="li1"></li>
+            <li class="li2"></li>
+            <li class="li3"></li>
+            <li class="li4"></li>
+            <li class="li5"></li>
+            <li class="li6"></li>
+            <li class="li7">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+                <div class="div5"></div>
+                <div class="div6"></div>
+            </li>
+        </ul>
+    </article>
+</body>
+</html>
